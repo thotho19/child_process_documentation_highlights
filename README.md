@@ -34,9 +34,9 @@ const args = [
 **argv0** | String | Explicitly set the value of argv[0] sent to the child process. This will be set to command if not specified.
 **stdio** | Array or String | Child's stdio configuration. [see options.stdio](https://nodejs.org/api/child_process.html#child_process_options_stdio)
 **detached** | Boolean | Prepare child to run independently of its parent process. Specific behavior depends on the platform. [see options.detached](https://nodejs.org/api/child_process.html#child_process_options_detached)
-**uid** | Boolean | Current working directory of the child process.
-**cwd** | String | Current working directory of the child process.
-**cwd** | String | Current working directory of the child process.
-**cwd** | String | Current working directory of the child process.
-**cwd** | String | Current working directory of the child process.
-**cwd** | String | Current working directory of the child process.
+**uid** | Number | Sets the user identity of the process. [see setuid(2)](https://man7.org/linux/man-pages/man2/setuid.2.html)
+**gid** | Number | Sets the group identity of the process. (see setgid(2))[https://man7.org/linux/man-pages/man2/setgid.2.html]
+**serialization** | String | Specify the kind of serialization used for sending messages between processes. Possible values are 'json' and 'advanced'. See [Advanced serialization](https://nodejs.org/api/child_process.html#child_process_advanced_serialization) for more details. Default: 'json'.
+**shell** | String | f true, runs command inside of a shell. Uses _**'/bin/sh' on Unix**_ , and _**process.env.ComSpec on Windows**_ . A different shell can be specified as a string. see [Shell requirements](https://nodejs.org/api/child_process.html#child_process_shell_requirements) and [Default Windows shell](https://nodejs.org/api/child_process.html#child_process_default_windows_shell). **Default**: false (no shell).
+**windowsVerbatimArguments** | Boolean | No quoting or escaping of arguments is done on Windows. Ignored on Unix. This is set to true automatically when shell is specified and is CMD. **Default**: false.
+**windowsHide** | Boolean | Hide the subprocess console window that would normally be created on Windows systems. **Default**: false.
